@@ -765,20 +765,40 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
 
     const focusItems = document.querySelectorAll('.focus-item');
     if (focusItems[0]) {
-      focusItems[0].querySelector('strong').textContent = data.focusToolsTitle;
-      focusItems[0].querySelector('span').textContent = data.focusToolsSub;
+      const detail = focusItems[0].querySelector('.focus-detail');
+      if (detail) {
+        const strong = detail.querySelector('strong');
+        const span = detail.querySelector('span');
+        if (strong) strong.textContent = data.focusToolsTitle;
+        if (span) span.textContent = data.focusToolsSub;
+      }
     }
     if (focusItems[1]) {
-      focusItems[1].querySelector('strong').textContent = data.focusLiteracyTitle;
-      focusItems[1].querySelector('span').textContent = data.focusLiteracySub;
+      const detail = focusItems[1].querySelector('.focus-detail');
+      if (detail) {
+        const strong = detail.querySelector('strong');
+        const span = detail.querySelector('span');
+        if (strong) strong.textContent = data.focusLiteracyTitle;
+        if (span) span.textContent = data.focusLiteracySub;
+      }
     }
     if (focusItems[2]) {
-      focusItems[2].querySelector('strong').textContent = data.focusEvTitle;
-      focusItems[2].querySelector('span').textContent = data.focusEvSub;
+      const detail = focusItems[2].querySelector('.focus-detail');
+      if (detail) {
+        const strong = detail.querySelector('strong');
+        const span = detail.querySelector('span');
+        if (strong) strong.textContent = data.focusEvTitle;
+        if (span) span.textContent = data.focusEvSub;
+      }
     }
     if (focusItems[3]) {
-      focusItems[3].querySelector('strong').textContent = data.focusTechTitle;
-      focusItems[3].querySelector('span').textContent = data.focusTechSub;
+      const detail = focusItems[3].querySelector('.focus-detail');
+      if (detail) {
+        const strong = detail.querySelector('strong');
+        const span = detail.querySelector('span');
+        if (strong) strong.textContent = data.focusTechTitle;
+        if (span) span.textContent = data.focusTechSub;
+      }
     }
 
     setElem('.tech-stack-title', data.stackTitle);
