@@ -536,6 +536,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
 
   const translations = {
     en: {
+      welcomeHome: 'WELCOME HOME',
       heroTag: 'INDIA DIGITAL PUBLIC INFRASTRUCTURE',
       heroTitle: 'INDIA\'S ALL-IN-ONE TECHNOLOGY PORTAL',
       heroSub: 'Decoding Useful Tech & AI Tools to Create / Build What You Want',
@@ -569,6 +570,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       transmitBtn: '<span class="btn-bracket">&lt;</span> TRANSMIT <span class="btn-bracket">&gt;</span>'
     },
     hi: {
+      welcomeHome: 'स्वागत है',
       heroTag: 'भारत डिजिटल पब्लिक इंफ्रास्ट्रक्चर',
       heroTitle: 'भारत का ऑल-इन-वन टेक्नोलॉजी पोर्टल',
       heroSub: 'उपयोगी टेक और एआई टूल्स को समझें और जो चाहें वो बनाएं',
@@ -602,6 +604,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       transmitBtn: '<span class="btn-bracket">&lt;</span> भेजें <span class="btn-bracket">&gt;</span>'
     },
     kn: {
+      welcomeHome: 'ಸ್ವಾಗತ',
       heroTag: 'ಭಾರತ ಡಿಜಿಟಲ್ ಸಾರ್ವಜನಿಕ ಮೂಲಸೌಕರ್ಯ',
       heroTitle: 'ಭಾರತದ ಆಲ್-ಇನ್-ಒನ್ ತಂತ್ರಜ್ಞಾನ ಪೋರ್ಟಲ್',
       heroSub: 'ನಿಮಗೆ ಬೇಕಾದುದನ್ನು ನಿರ್ಮಿಸಲು ಉಪಯುಕ್ತ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಎಐ ಪರಿಕರಗಳನ್ನು ಅರ್ಥೈಸಿಕೊಳ್ಳಿ',
@@ -610,7 +613,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       aboutHeading: '// ಉಪಯುಕ್ತ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಎಐ ಡಿಕೋಡಿಂಗ್',
       missionTag: '> ಮಿಷನ್_ಸ್ಟೇಟ್‌ಮೆಂಟ್',
       missionTitle: 'ಭಾರತದ ಎಐ ಕ್ರಾಂತಿ ಮತ್ತು ತಾಂತ್ರಿಕ ಸಾಕ್ಷರತೆಯ ನೇತೃತ್ವ',
-      missionP1: '<strong>ಯಂತ್ರ ಮಾನವ</strong>ಗೆ ಸುಸ್ವಾಗತ — ಪ್ರಾಯೋಗಿಕ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಆಧುನಿಕ ಎಐ ಪರಿಕರಗಳನ್ನು ಅರ್ಥೈಸಿಕೊಳ್ಳುವ ನಿಮ್ಮ ಕೇಂದ್ರ. ನಾವು ಆಧುನಿಕ ಎಐ ಮಾದರಿಗಳು ಮತ್ತು ಆಟೋಮೇಷನ್ ಪರಿಕರಗಳನ್ನು ಸರಳಗೊಳಿಸುತ್ತೇವೆ.',
+      missionP1: '<strong>ಯಂತ್ರ ಮಾನವ</strong>ಗೆ ಸುಸ್ವಾಗತ — ಪ್ರಾಯೋಗಿಕ ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ಆಧುನಿಕ ಎಐ ಪರಿಕರಗಳನ್ನು ಅರ್ಥೈಸಿಕೊಳ್ಳುವ ನಿಮ್ಮ ಕೇಂದ್ರ। ನಾವು ಆಧುನಿಕ ಎಐ ಮಾದರಿಗಳು ಮತ್ತು ಆಟೋಮೇಷನ್ ಪರಿಕರಗಳನ್ನು ಸರಳಗೊಳಿಸುತ್ತೇವೆ.',
       missionP2: 'ಎಐ ಪರಿಕರಗಳನ್ನು ಕಲಿಯುವುದರಿಂದ ಹಿಡಿದು ಭಾರತದಾದ್ಯಂತ <strong>ಎಐ ಸಾಕ್ಷರತೆ</strong>, <strong>ತಂತ್ರಜ್ಞಾನ ಪ್ರಗತಿ</strong> ಮತ್ತು <strong>ಇವಿ ಕ್ರಾಂತಿ</strong>ಯನ್ನು ಬೆಂಬಲಿಸುವವರೆಗೆ—ಯಂತ್ರ ಮಾನವ ವಿದ್ಯಾರ್ಥಿಗಳು ಮತ್ತು ಡೆವಲಪರ್‌ಗಳಿಗೆ ಜ್ಞಾನವನ್ನು ನೀಡುತ್ತದೆ.',
       focusToolsTitle: 'ಉಪಯುಕ್ತ ಎಐ ಪರಿಕರಗಳು',
       focusToolsSub: 'ಎಐ ಏಜೆಂಟ್‌ಗಳು, ಪ್ರಾಂಪ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಬಿಲ್ಡರ್ ತಂತ್ರಜ್ಞಾನ',
@@ -635,6 +638,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       transmitBtn: '<span class="btn-bracket">&lt;</span> ಕಳುಹಿಸಿ <span class="btn-bracket">&gt;</span>'
     },
     ta: {
+      welcomeHome: 'நல்வரவு',
       heroTag: 'இந்திய டிஜிட்டல் பொது உள்கட்டமைப்பு',
       heroTitle: 'இந்தியாவின் ஆல்-இன்-ஒன் தொழில்நுட்ப போர்ட்டல்',
       heroSub: 'நீங்கள் விரும்பியதை உருவாக்க பயனுள்ள தொழில்நுட்பம் மற்றும் AI கருவிகளைப் புரிந்து கொள்ளுங்கள்',
@@ -668,6 +672,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       transmitBtn: '<span class="btn-bracket">&lt;</span> அனுப்பு <span class="btn-bracket">&gt;</span>'
     },
     te: {
+      welcomeHome: 'స్వాగతం',
       heroTag: 'భారత డిజిటల్ పబ్లిక్ ఇన్‌ఫ్రాస్ట్రక్చర్',
       heroTitle: 'భారతదేశపు ఆల్-ఇన్-వన్ టెక్నాలజీ పోర్టల్',
       heroSub: 'మీరు కావాలనుకున్నది నిర్మించడానికి ఉపయోగపడే టెక్ & AI టూల్స్‌ను అర్థం చేసుకోండి',
@@ -701,6 +706,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       transmitBtn: '<span class="btn-bracket">&lt;</span> పంపండి <span class="btn-bracket">&gt;</span>'
     },
     bn: {
+      welcomeHome: 'স্বাগতম',
       heroTag: 'ভারতের ডিজিটাল পাবলিক ইনফ্রাস্ট্রাকচার',
       heroTitle: 'ভারতের অল-ইন-ওয়ান টেকনোলজি পোর্টাল',
       heroSub: 'আপনার পছন্দের জিনিস তৈরি করতে দরকারি টেক ও এআই টুলস বুঝুন',
@@ -747,13 +753,14 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       }
     };
 
-    setElem('.hero-tag', `<span class="pulse-dot"></span>${data.heroTag}`, true);
-    setElem('.hero-title', data.heroTitle);
-    setElem('.hero-subtitle', data.heroSub);
-    setElem('.btn-hero-matrix', data.ctaMatrix, true);
+    const mainTitle = document.getElementById('main-title');
+    if (mainTitle) {
+      mainTitle.textContent = data.welcomeHome || 'WELCOME HOME';
+      mainTitle.setAttribute('data-value', data.welcomeHome || 'WELCOME HOME');
+    }
 
-    const newsletterCta = document.querySelectorAll('.hero-ctas .btn-hud')[1];
-    if (newsletterCta) newsletterCta.textContent = data.ctaNewsletter;
+    setElem('.enter-matrix-btn', data.ctaMatrix, true);
+    setElem('.hero-subtitle', data.heroSub);
 
     setElem('.about-section .hud-heading', data.aboutHeading);
     setElem('.bio-tag', data.missionTag);

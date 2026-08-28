@@ -390,16 +390,18 @@ body {
 .sys-code {
   color: var(--hud-white);
   font-weight: 700;
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 
 .decoder-title {
   font-family: var(--font-mono);
   font-size: clamp(1.8rem, 4vw, 3.4rem);
   font-weight: 700;
-  color: var(--hud-white);
+  color: var(--matrix-green);
   letter-spacing: 2px;
   line-height: 1.25;
-  text-shadow: 0 0 20px var(--hud-white-glow), 0 0 40px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 20px var(--matrix-green-glow), 0 0 40px rgba(0, 255, 102, 0.4);
   margin-bottom: 1.5rem;
 }
 
