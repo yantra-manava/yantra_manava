@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yantra Manava | India's All-in-One Technology Portal</title>
+  <meta name="description" content="Yantra Manava - India's premier All-in-One Technology Portal. Deep-dive into India's Silicon Valleys, AI frontiers, semiconductor hubs, aerospace tech, and digital innovations.">
+
+  <!-- Google Fonts: Share Tech Mono, Fira Code, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Matrix Background Rain Container (Spans Hero Section + Extended Buffer Space Below) -->
+  <div class="matrix-rain-zone" id="matrix-rain-zone">
+    <canvas id="matrix-canvas"></canvas>
+  </div>
+
+  <!-- CRT Scanlines Overlay -->
+  <div id="crt-overlay" class="crt-scanlines"></div>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="matrix-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-bracket">[</span><span class="logo-text">YANTRA<span class="logo-dot">_MANAVA</span></span><span class="logo-bracket">]</span>
+        <span class="status-badge"><span class="pulse-dot"></span>INDIA_TECH_PORTAL</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span>ABOUT</a>
+        <a href="#about" class="nav-link"><span class="nav-num">02.</span>TOOLS &amp; AI</a>
+        <a href="#newsletter" class="nav-link"><span class="nav-num">03.</span>INSIDER</a>
+      </nav>
+
+      <div class="hud-controls">
+        <button id="scanline-toggle" class="hud-btn active" title="Toggle CRT Scanlines">
+          <svg class="hud-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> CRT: <span id="crt-status">ON</span>
+        </button>
+        <button id="rain-toggle" class="hud-btn active" title="Toggle Matrix Digital Rain">
+          <svg class="hud-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg> RAIN: <span id="rain-status">ON</span>
+        </button>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hud-frame hero-hud">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
+
+        <div class="hero-header-tag">
+          <span class="terminal-prefix">&gt; SYS_INIT // </span>
+          <span class="sys-code">YANTRA_MANAVA_INDIA_TECH_PORTAL_v3.0</span>
+        </div>
+
+        <h1 class="decoder-title" id="main-title" data-value="WELCOME HOME">
+          WELCOME HOME
+        </h1>
+
+        <p class="hero-subtitle">
+          India's Premier Tech &amp; AI Portal — Decoding Useful Technology &amp; AI Tools to help you Create and Build whatever you want. Empowering AI Literacy, Tech Progression, and India's EV Revolution.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="btn-hud primary-btn enter-matrix-btn">
+            <span class="btn-bracket">&lt;</span> ENTER THE MATRIX <span class="btn-bracket">&gt;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hidden Interactive Matrix Terminal Section -->
+    <section class="terminal-section" id="terminal" style="display: none;">
+      <div class="section-title-wrap">
+        <h2 class="hud-heading" data-value="// INTERACTIVE MATRIX TERMINAL">// INTERACTIVE MATRIX TERMINAL</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="hud-frame terminal-hud">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
+
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">YANTRA_MANAVA_OS v3.0 // INTERACTIVE SHELL</div>
+          <div class="terminal-status"><span class="pulse-dot"></span>CONNECTED</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <div id="terminal-output" class="terminal-output">
+            <div class="term-line term-sys">Yantra Manava OS [Version 3.0.42] - India's All-in-One Tech Portal Shell</div>
+            <div class="term-line term-info">Type <span class="term-cmd-highlight">'help'</span> for a list of commands.</div>
+          </div>
+
+          <form id="terminal-form" class="terminal-input-line">
+            <span class="prompt-user">guest@yantra-manava</span>:<span class="prompt-path">~</span>$&nbsp;
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type a command...">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section (Dynamic AI Tools Carousel - Positioned Before AI Revolution) -->
+    <div class="tech-stack-section" id="tech-stack">
+      <div class="tech-stack-header">
+        <span class="terminal-prefix">&gt; AI_STACK // </span>
+        <h3 class="tech-stack-title">MODERN AI TOOLS &amp; BUILDER STACK</h3>
+      </div>
+
+      <div class="tech-carousel-viewport">
+        <div class="tech-carousel-track">
+          <!-- AI Tools Cards (Infinite Seamless Carousel with Authentic Brand Colors) -->
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-chatgpt" viewBox="0 0 24 24" fill="currentColor"><path d="M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9 6.07 6.07 0 0 0-10.27 2.17 6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.51 2.9 6.05 6.05 0 0 0 4.52 2.01 6.06 6.06 0 0 0 5.77-4.2 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.08z"/></svg>
+            <span class="tool-name">ChatGPT</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-claude" viewBox="0 0 24 24" fill="currentColor"><path d="M17.41 4H21L13.88 20H10.29L17.41 4ZM6.59 4H3L10.12 20H13.71L6.59 4Z"/></svg>
+            <span class="tool-name">Claude</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-gemini" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"/></svg>
+            <span class="tool-name">Gemini</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-cursor" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 19.5l9.5-3.5L21 19.5 12 2z"/></svg>
+            <span class="tool-name">Cursor</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-perplexity" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5l5.5 3.5L12 11.5 6.5 8 12 4.5zm-6 5.2l5 3.1v5.7l-5-3.1v-5.7zm12 5.7l-5 3.1v-5.7l5-3.1v5.7z"/></svg>
+            <span class="tool-name">Perplexity</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-v0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L24 22H0L12 1Z"/></svg>
+            <span class="tool-name">v0 by Vercel</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-midjourney" viewBox="0 0 24 24" fill="currentColor"><path d="M4 18l5-12 5 12h-2.5l-2.5-6-2.5 6H4zm11 0l2.5-6L20 18h-5z"/></svg>
+            <span class="tool-name">Midjourney</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-runway" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span class="tool-name">Runway</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-elevenlabs" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h3v16H7V4zm7 0h3v16h-3V4z"/></svg>
+            <span class="tool-name">ElevenLabs</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-mistral" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h4v4H3V3zm14 0h4v4h-4V3zM3 10h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4zM3 17h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4z"/></svg>
+            <span class="tool-name">Mistral AI</span>
+          </div>
+
+          <!-- Loop Duplicate -->
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-chatgpt" viewBox="0 0 24 24" fill="currentColor"><path d="M22.28 9.82a6 6 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.51-2.9 6.07 6.07 0 0 0-10.27 2.17 6 6 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 6 6 0 0 0 .51 4.91 6.05 6.05 0 0 0 6.51 2.9 6.05 6.05 0 0 0 4.52 2.01 6.06 6.06 0 0 0 5.77-4.2 6 6 0 0 0 4-2.9 6.06 6.06 0 0 0-.75-7.08z"/></svg>
+            <span class="tool-name">ChatGPT</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-claude" viewBox="0 0 24 24" fill="currentColor"><path d="M17.41 4H21L13.88 20H10.29L17.41 4ZM6.59 4H3L10.12 20H13.71L6.59 4Z"/></svg>
+            <span class="tool-name">Claude</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-gemini" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"/></svg>
+            <span class="tool-name">Gemini</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-cursor" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 19.5l9.5-3.5L21 19.5 12 2z"/></svg>
+            <span class="tool-name">Cursor</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-perplexity" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.5l5.5 3.5L12 11.5 6.5 8 12 4.5zm-6 5.2l5 3.1v5.7l-5-3.1v-5.7zm12 5.7l-5 3.1v-5.7l5-3.1v5.7z"/></svg>
+            <span class="tool-name">Perplexity</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-v0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L24 22H0L12 1Z"/></svg>
+            <span class="tool-name">v0 by Vercel</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-midjourney" viewBox="0 0 24 24" fill="currentColor"><path d="M4 18l5-12 5 12h-2.5l-2.5-6-2.5 6H4zm11 0l2.5-6L20 18h-5z"/></svg>
+            <span class="tool-name">Midjourney</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-runway" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span class="tool-name">Runway</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-elevenlabs" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h3v16H7V4zm7 0h3v16h-3V4z"/></svg>
+            <span class="tool-name">ElevenLabs</span>
+          </div>
+          <div class="tech-tool-card">
+            <svg class="tool-logo logo-mistral" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h4v4H3V3zm14 0h4v4h-4V3zM3 10h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4zM3 17h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4z"/></svg>
+            <span class="tool-name">Mistral AI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Tech Portal Section (AI Revolution) -->
+    <section class="about-section" id="about">
+      <div class="section-title-wrap">
+        <h2 class="hud-heading" data-value="// DECODING USEFUL TECH &amp; AI">// DECODING USEFUL TECH &amp; AI</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: 3D Holographic Spinning Earth Globe (India Highlighted) -->
+        <div class="creator-media-wrap">
+          <div class="hud-frame image-hud-frame cyberpunk-host-frame globe-hud-frame">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+            
+            <!-- Animated Cyber Backdrop Behind Globe -->
+            <div class="host-cyber-bg">
+              <div class="cyber-grid-overlay"></div>
+              <div class="hud-target-reticle"></div>
+              <canvas id="host-matrix-canvas" class="host-matrix-canvas"></canvas>
+            </div>
+            
+            <!-- 3D Spinning Earth Globe with Real World Map & Highlighted India -->
+            <div class="globe-viewport">
+              <div class="globe-sphere earth-globe">
+                <!-- Real Earth World Map Texture (Infinite 360 Spin) -->
+                <div class="earth-map-texture"></div>
+                <div class="earth-atmosphere-glow"></div>
+
+                <!-- Highlighted India Beacon Tag -->
+                <div class="india-beacon-wrap">
+                  <div class="india-beacon-pin"></div>
+                  <div class="india-beacon-pulse"></div>
+                  <div class="india-label-tag">
+                    <span class="pulse-dot"></span> INDIA TECH NEXUS
+                  </div>
+                </div>
+              </div>
+              <div class="globe-equator-ring"></div>
+            </div>
+
+            <!-- Biometric Laser Scanner Line -->
+            <div class="image-scanner-line"></div>
+            
+            <div class="image-overlay-badge">
+              <span class="badge-dot"></span> GLOBAL TELEMETRY // INDIA MONITOR
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bio Content & Mission Statement -->
+        <div class="about-content">
+          <div class="hud-card bio-card">
+            <div class="bio-tag">&gt; MISSION_STATEMENT</div>
+            <h3 class="bio-title">Lead India's AI Revolution &amp; Tech Literacy</h3>
+            
+            <p class="bio-text">
+              Welcome to <strong>Yantra Manava</strong> — your hub for decoding practical technology and cutting-edge AI tools. We break down modern AI models, creator tools, low-code development platforms, and everyday tech workflows so you can build, automate, and bring your ideas to life.
+            </p>
+            
+            <p class="bio-text">
+              From mastering generative AI tools and AI agents to driving widespread <strong>AI Literacy</strong> across India, tracking <strong>Tech Progression</strong>, and following India's rapid <strong>EV Revolution</strong>—Yantra Manava equips creators, students, developers, and entrepreneurs with actionable tech knowledge.
+            </p>
+
+            <!-- Focus Areas Badges -->
+            <div class="focus-grid">
+              <div class="focus-item">
+                <span class="focus-icon">
+                  <svg class="focus-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </span>
+                <div class="focus-detail">
+                  <strong>Useful AI Tools</strong>
+                  <span>AI agents, prompt engineering &amp; builder tech</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-icon">
+                  <svg class="focus-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </span>
+                <div class="focus-detail">
+                  <strong>AI Literacy India</strong>
+                  <span>Empowering students &amp; creators across India</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-icon">
+                  <svg class="focus-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </span>
+                <div class="focus-detail">
+                  <strong>EV Revolution</strong>
+                  <span>Electric mobility, smart battery &amp; charging grids</span>
+                </div>
+              </div>
+              <div class="focus-item">
+                <span class="focus-icon">
+                  <svg class="focus-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"/><path d="M9 18l-4.5 4.5"/><path d="M15 9l4.5-4.5"/></svg>
+                </span>
+                <div class="focus-detail">
+                  <strong>Tech Progression</strong>
+                  <span>Modern dev workflows, automation &amp; building</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Global & India AI/Tech News Grid -->
+      <div class="ai-news-section">
+        <div class="ai-news-header">
+          <span class="terminal-prefix">&gt; TECH_BYTES // </span>
+          <h3 class="ai-news-title">TOP USEFUL TECH &amp; AI DISPATCHES</h3>
+        </div>
+
+        <div class="ai-news-grid">
+          <!-- Indian AI News Highlight 1 -->
+          <div class="hud-card news-card india-highlight-card">
+            <div class="news-badge-row">
+              <span class="news-tag india-tag">
+                <svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="3"/></svg> INDIA HIGHLIGHT
+              </span>
+              <span class="news-time">2 HRS AGO</span>
+            </div>
+            <h4 class="news-headline">National AI Literacy Drive Reaches 5M Students &amp; Builders with Free Hands-on AI Toolkits</h4>
+            <p class="news-summary">
+              Government and tech ecosystem initiatives launch interactive AI workflows, prompt engineering modules, and multilingual AI builder tools across 12 Indian languages.
+            </p>
+            <div class="news-footer-tag"><code>TOPIC: AI LITERACY &amp; BUILDER TOOLS</code></div>
+          </div>
+
+          <!-- Indian AI News Highlight 2 -->
+          <div class="hud-card news-card india-highlight-card">
+            <div class="news-badge-row">
+              <span class="news-tag india-tag">
+                <svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="3"/></svg> INDIA HIGHLIGHT
+              </span>
+              <span class="news-time">5 HRS AGO</span>
+            </div>
+            <h4 class="news-headline">India's EV Revolution Surges as Native Smart Scooters &amp; Fast Battery Swapping Infra Reach 100+ Cities</h4>
+            <p class="news-summary">
+              Domestic EV makers deploy AI-optimized battery management systems (BMS) and smart charging networks across urban hubs and national highways.
+            </p>
+            <div class="news-footer-tag"><code>TOPIC: EV REVOLUTION &amp; CLEAN MOBILITY</code></div>
+          </div>
+
+          <!-- Global AI News 1 -->
+          <div class="hud-card news-card global-card">
+            <div class="news-badge-row">
+              <span class="news-tag global-tag">
+                <svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> USEFUL TECH &amp; AI
+              </span>
+              <span class="news-time">8 HRS AGO</span>
+            </div>
+            <h4 class="news-headline">Next-Gen AI Coding Assistants &amp; Autonomous Agents Empower Solo Creators to Build Full-Stack Apps</h4>
+            <p class="news-summary">
+              Breakthroughs in multi-agent orchestration and natural language software builders reduce full-stack web app development times from weeks to minutes.
+            </p>
+            <div class="news-footer-tag"><code>TOPIC: AI TOOLS &amp; CREATOR TECH</code></div>
+          </div>
+
+          <!-- Global AI News 2 -->
+          <div class="hud-card news-card global-card">
+            <div class="news-badge-row">
+              <span class="news-tag global-tag">
+                <svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg> USEFUL TECH &amp; AI
+              </span>
+              <span class="news-time">12 HRS AGO</span>
+            </div>
+            <h4 class="news-headline">Multimodal Creator Tools Democratize Real-Time Video Synthesis, 3D Assets, and Design</h4>
+            <p class="news-summary">
+              Generative UI and design automation platforms enable creators worldwide to produce studio-grade visuals and web applications with simple text prompts.
+            </p>
+            <div class="news-footer-tag"><code>TOPIC: TECH PROGRESSION &amp; CREATOR TOOLS</code></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="hud-frame newsletter-hud">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
+
+        <div class="newsletter-content">
+          <span class="terminal-prefix">&gt; SUBSCRIBE_SYS // </span>
+          <h2 class="newsletter-title">Join the Yantra Manava Tech Insider</h2>
+          <p class="newsletter-desc">
+            Get exclusive technology notes, hardware schematics, AI benchmarks, and early access to upcoming Tech Dispatches delivered straight to your inbox.
+          </p>
+
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="input-wrap">
+              <span class="input-prefix">&gt;</span>
+              <input type="email" id="email-input" placeholder="enter_your_email@domain.com" required>
+            </div>
+            <button type="submit" class="btn-hud primary-btn">
+              <span class="btn-bracket">&lt;</span> TRANSMIT <span class="btn-bracket">&gt;</span>
+            </button>
+          </form>
+          <div id="newsletter-msg" class="newsletter-msg"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="matrix-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-bracket">[</span><span class="logo-text">YANTRA<span class="logo-dot">_MANAVA</span></span><span class="logo-bracket">]</span>
+        <p>India's All-in-One Technology Portal</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">The AI Revolution</a>
+        <a href="#terminal">Interactive Terminal</a>
+        <a href="#newsletter">Insider Newsletter</a>
+      </div>
+
+      <div class="footer-sys">
+        <code>STATUS: 200 OK | PORTAL_VER: 3.0.42</code>
+        <div id="sys-clock" class="sys-clock">UTC TIME: 00:00:00</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yantra Manava. All Rights Reserved. India's Premier All-in-One Technology Portal.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
