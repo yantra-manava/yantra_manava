@@ -753,6 +753,17 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       }
     };
 
+    // Header nav links
+    const navLinksList = document.querySelectorAll('.nav-link');
+    if (navLinksList[0]) navLinksList[0].innerHTML = `<span class="nav-num">01.</span>${data.navAbout || 'ABOUT'}`;
+    if (navLinksList[1]) navLinksList[1].innerHTML = `<span class="nav-num">02.</span>${data.navTools || 'TOOLS & AI'}`;
+    if (navLinksList[2]) navLinksList[2].innerHTML = `<span class="nav-num">03.</span>${data.navInsider || 'INSIDER'}`;
+
+    // Header status badge
+    setElem('.status-badge', `<span class="pulse-dot"></span>${data.statusBadge || 'INDIA_TECH_PORTAL'}`, true);
+    setElem('.sys-code', data.sysCode || 'YANTRA_MANAVA_INDIA_TECH_PORTAL_v3.0');
+
+    // Hero title & buttons
     const mainTitle = document.getElementById('main-title');
     if (mainTitle) {
       mainTitle.textContent = data.welcomeHome || 'WELCOME HOME';
@@ -762,6 +773,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
     setElem('.enter-matrix-btn', data.ctaMatrix, true);
     setElem('.hero-subtitle', data.heroSub);
 
+    // Section headings & mission
     setElem('.about-section .hud-heading', data.aboutHeading);
     setElem('.bio-tag', data.missionTag);
     setElem('.bio-title', data.missionTitle);
@@ -770,6 +782,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
     if (pElems[0]) pElems[0].innerHTML = data.missionP1;
     if (pElems[1]) pElems[1].innerHTML = data.missionP2;
 
+    // Focus items
     const focusItems = document.querySelectorAll('.focus-item');
     if (focusItems[0]) {
       const detail = focusItems[0].querySelector('.focus-detail');
@@ -811,6 +824,29 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
     setElem('.tech-stack-title', data.stackTitle);
     setElem('.ai-news-title', data.newsTitle);
 
+    // News tags & topics
+    const indiaTags = document.querySelectorAll('.india-tag');
+    indiaTags.forEach(tag => {
+      tag.innerHTML = `<svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="3"/></svg> ${data.tagIndia || 'INDIA HIGHLIGHT'}`;
+    });
+
+    const globalTags = document.querySelectorAll('.global-tag');
+    globalTags.forEach(tag => {
+      tag.innerHTML = `<svg class="news-tag-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> ${data.tagGlobal || 'USEFUL TECH & AI'}`;
+    });
+
+    const newsTimes = document.querySelectorAll('.news-time');
+    if (newsTimes[0]) newsTimes[0].textContent = data.time2h || '2 HRS AGO';
+    if (newsTimes[1]) newsTimes[1].textContent = data.time5h || '5 HRS AGO';
+    if (newsTimes[2]) newsTimes[2].textContent = data.time8h || '8 HRS AGO';
+    if (newsTimes[3]) newsTimes[3].textContent = data.time12h || '12 HRS AGO';
+
+    const newsTopicTags = document.querySelectorAll('.news-footer-tag code');
+    if (newsTopicTags[0]) newsTopicTags[0].textContent = data.topic1 || 'TOPIC: AI LITERACY & BUILDER TOOLS';
+    if (newsTopicTags[1]) newsTopicTags[1].textContent = data.topic2 || 'TOPIC: EV REVOLUTION & CLEAN MOBILITY';
+    if (newsTopicTags[2]) newsTopicTags[2].textContent = data.topic3 || 'TOPIC: AI TOOLS & CREATOR TECH';
+    if (newsTopicTags[3]) newsTopicTags[3].textContent = data.topic4 || 'TOPIC: TECH PROGRESSION & CREATOR TOOLS';
+
     const newsCards = document.querySelectorAll('.news-card');
     if (newsCards[0]) {
       newsCards[0].querySelector('.news-headline').textContent = data.news1Title;
@@ -832,8 +868,19 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
     setElem('.newsletter-title', data.newsletterTitle);
     setElem('.newsletter-desc', data.newsletterSub);
     
+    const emailInput = document.getElementById('email-input');
+    if (emailInput) emailInput.placeholder = data.emailPlaceholder || 'enter_your_email@domain.com';
+
     const submitBtn = document.querySelector('.newsletter-form .primary-btn');
     if (submitBtn) submitBtn.innerHTML = data.transmitBtn;
+
+    // Footer
+    setElem('.footer-brand p', data.footerSubtitle || 'India\'s All-in-One Technology Portal');
+    const footerLinksList = document.querySelectorAll('.footer-links a');
+    if (footerLinksList[0]) footerLinksList[0].textContent = data.footerLink1 || 'The AI Revolution';
+    if (footerLinksList[1]) footerLinksList[1].textContent = data.footerLink2 || 'Interactive Terminal';
+    if (footerLinksList[2]) footerLinksList[2].textContent = data.footerLink3 || 'Insider Newsletter';
+    setElem('.footer-bottom p', data.footerCopyright);
   }
 
   if (langSelector) {
