@@ -528,6 +528,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
         navLinks.style.borderBottom = '1px solid var(--hud-border)';
       }
     });
+  }
   // ==========================================================================
   // 9. INDIAN LANGUAGES MULTI-LANGUAGE TRANSLATION ENGINE
   // ==========================================================================
@@ -814,4 +815,6 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       applyTranslation(lang);
     });
   }
+
+});
 
