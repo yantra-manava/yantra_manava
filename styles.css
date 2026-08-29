@@ -2337,15 +2337,17 @@ body {
 .multimedia-carousel-viewport {
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  padding: 1.5rem 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .multimedia-carousel-track {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 4rem;
   width: max-content;
-  animation: scrollMultimediaCarousel 25s linear infinite;
+  animation: scrollMultimediaCarousel 28s linear infinite;
 }
 
 .multimedia-carousel-track:hover {
@@ -2354,36 +2356,39 @@ body {
 
 @keyframes scrollMultimediaCarousel {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-33.333%); }
 }
 
 .multimedia-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 18, 14, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 0.85rem 1.6rem;
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  height: 72px;
-  min-width: 150px;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
-}
-
-.multimedia-card:hover {
-  border-color: var(--matrix-green);
-  box-shadow: 0 0 20px rgba(0, 255, 102, 0.25);
-  transform: translateY(-3px);
-  background: rgba(12, 24, 18, 0.95);
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  backdrop-filter: none;
+  height: 95px;
+  min-width: 170px;
+  cursor: pointer;
 }
 
 .multimedia-brand-img {
-  max-height: 50px;
-  max-width: 140px;
+  max-height: 85px;
+  max-width: 220px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.colors-kannada-img {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 4px 12px rgba(0,0,0,0.8));
+}
+
+.multimedia-card:hover .multimedia-brand-img {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 20px rgba(0, 255, 102, 0.5));
 }
 
