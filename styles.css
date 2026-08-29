@@ -1698,6 +1698,19 @@ body {
   .footer-sys {
     text-align: left;
   }
+
+  .homegrown-hud {
+    padding: 1.5rem 1rem;
+  }
+
+  .homegrown-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .homegrown-card-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
 }
 
 @media (max-width: 580px) {
@@ -2203,9 +2216,10 @@ body {
 
 .homegrown-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2.5rem;
+  width: 100%;
 }
 
 .homegrown-card {
@@ -2217,6 +2231,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .homegrown-card:hover {
@@ -2231,37 +2248,45 @@ body {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .homegrown-brand-title-wrap {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 .homegrown-app-logo-box {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .biggbucks-box {
-  background: rgba(62, 207, 142, 0.12);
-  border: 1px solid rgba(62, 207, 142, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .badboon-box {
-  background: rgba(225, 29, 72, 0.12);
-  border: 1px solid rgba(225, 29, 72, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.homegrown-logo-svg {
-  width: 24px;
-  height: 24px;
+.homegrown-app-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .homegrown-app-name {
@@ -2269,6 +2294,7 @@ body {
   font-size: 1.3rem;
   color: var(--hud-white);
   line-height: 1.2;
+  word-break: break-word;
 }
 
 .homegrown-app-tag {
@@ -2277,6 +2303,8 @@ body {
   color: var(--matrix-green);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  display: block;
+  word-break: break-word;
 }
 
 .homegrown-launch-btn {
@@ -2285,6 +2313,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  flex-shrink: 0;
 }
 
 .link-arrow-svg {
@@ -2297,6 +2326,7 @@ body {
   color: var(--text-dim);
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  word-break: break-word;
 }
 
 .homegrown-pills-row {
@@ -2313,6 +2343,8 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 4px;
   color: var(--hud-white);
+  white-space: normal;
+  word-break: break-word;
 }
 
 /* Multimedia Projects Delivered To Carousel */
@@ -2345,9 +2377,9 @@ body {
 .multimedia-carousel-track {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 3.5rem;
   width: max-content;
-  animation: scrollMultimediaCarousel 28s linear infinite;
+  animation: scrollMultimediaCarousel 12s linear infinite;
 }
 
 .multimedia-carousel-track:hover {
