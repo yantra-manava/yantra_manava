@@ -1440,9 +1440,10 @@ body {
 
 .zen-ai-compare {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2.5rem;
+  width: 100%;
 }
 
 .zen-card {
@@ -1451,6 +1452,9 @@ body {
   border-radius: 6px;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .zen-card.claude-card,
@@ -1460,10 +1464,6 @@ body {
 
 .zen-card:hover {
   border-color: var(--matrix-green);
-  box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
-}
-
-.zen-card:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
@@ -1471,13 +1471,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
   margin-bottom: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .zen-card-title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   color: var(--hud-white);
+  word-break: break-word;
+  min-width: 0;
 }
 
 .zen-card-badge {
@@ -1488,6 +1494,8 @@ body {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.08);
   color: var(--hud-white);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .zen-card-badge.jio-badge {
@@ -1501,12 +1509,14 @@ body {
   color: var(--text-dim);
   margin-bottom: 1rem;
   font-style: italic;
+  word-break: break-word;
 }
 
 .zen-pro-con {
   font-size: 0.88rem;
   line-height: 1.5;
   margin-bottom: 0.6rem;
+  word-break: break-word;
 }
 
 .zen-pro-con strong.pro-txt {
@@ -1710,6 +1720,20 @@ body {
   .homegrown-card-header {
     flex-wrap: wrap;
     gap: 0.75rem;
+  }
+
+  .zen-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .zen-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .zen-card-badge {
+    align-self: flex-start;
   }
 }
 
