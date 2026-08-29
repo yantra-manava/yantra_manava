@@ -2260,25 +2260,22 @@ body {
 }
 
 .homegrown-app-logo-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.biggbucks-box {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
+.biggbucks-box,
 .badboon-box {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border: none;
 }
 
 .homegrown-app-logo-img {
@@ -2287,6 +2284,7 @@ body {
   width: auto;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.7));
 }
 
 .homegrown-app-name {

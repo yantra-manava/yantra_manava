@@ -515,15 +515,21 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
   }
 
   // ==========================================================================
-  // 7. REALTIME SYSTEM CLOCK
+  // 7. REALTIME SYSTEM CLOCK (IST)
   // ==========================================================================
   const sysClock = document.getElementById('sys-clock');
 
   function updateClock() {
     if (!sysClock) return;
     const now = new Date();
-    const timeString = now.toUTCString().replace('GMT', 'UTC');
-    sysClock.textContent = `SYSTEM TIME: ${timeString.split(' ').slice(4).join(' ')} UTC`;
+    const istTimeString = now.toLocaleTimeString('en-US', {
+      timeZone: 'Asia/Kolkata',
+      hour12: false,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    });
+    sysClock.textContent = `SYSTEM TIME: ${istTimeString} IST`;
   }
 
   setInterval(updateClock, 1000);
