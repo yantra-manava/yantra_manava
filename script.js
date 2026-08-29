@@ -226,11 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const crtStatus = document.getElementById('crt-status');
 
   if (scanlineToggleBtn && crtOverlay) {
+    const isEnabled = !crtOverlay.classList.contains('disabled');
+    if (crtStatus) crtStatus.textContent = isEnabled ? 'ON' : 'OFF';
+    scanlineToggleBtn.classList.toggle('active', isEnabled);
+
     scanlineToggleBtn.addEventListener('click', () => {
       crtOverlay.classList.toggle('disabled');
-      const isEnabled = !crtOverlay.classList.contains('disabled');
-      crtStatus.textContent = isEnabled ? 'ON' : 'OFF';
-      scanlineToggleBtn.classList.toggle('active', isEnabled);
+      const nowEnabled = !crtOverlay.classList.contains('disabled');
+      if (crtStatus) crtStatus.textContent = nowEnabled ? 'ON' : 'OFF';
+      scanlineToggleBtn.classList.toggle('active', nowEnabled);
     });
   }
 

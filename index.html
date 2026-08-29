@@ -25,8 +25,8 @@
     <canvas id="matrix-canvas"></canvas>
   </div>
 
-  <!-- CRT Scanlines Overlay -->
-  <div id="crt-overlay" class="crt-scanlines"></div>
+  <!-- CRT Scanlines Overlay (Disabled by default) -->
+  <div id="crt-overlay" class="crt-scanlines disabled"></div>
 
   <!-- Ambient Glow Effects -->
   <div class="glow-orb orb-1"></div>
@@ -43,7 +43,8 @@
       <nav class="nav-links" id="nav-links">
         <a href="#about" class="nav-link"><span class="nav-num">01.</span>ABOUT</a>
         <a href="#about" class="nav-link"><span class="nav-num">02.</span>TOOLS &amp; AI</a>
-        <a href="#newsletter" class="nav-link"><span class="nav-num">03.</span>INSIDER</a>
+        <a href="#homegrown" class="nav-link"><span class="nav-num">03.</span>HOME GROWN</a>
+        <a href="#newsletter" class="nav-link"><span class="nav-num">04.</span>INSIDER</a>
       </nav>
 
       <div class="hud-controls">
@@ -58,8 +59,8 @@
             <option value="bn">বাংলা (BN)</option>
           </select>
         </div>
-        <button id="scanline-toggle" class="hud-btn active" title="Toggle CRT Scanlines">
-          <svg class="hud-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> CRT: <span id="crt-status">ON</span>
+        <button id="scanline-toggle" class="hud-btn" title="Toggle CRT Scanlines">
+          <svg class="hud-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> CRT: <span id="crt-status">OFF</span>
         </button>
         <button id="rain-toggle" class="hud-btn active" title="Toggle Matrix Digital Rain">
           <svg class="hud-btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg> RAIN: <span id="rain-status">ON</span>
@@ -510,6 +511,194 @@
           <a href="zen-guide.html" class="btn-hud primary-btn zen-cta-btn">
             <span class="btn-bracket">&lt;</span> DIVE IN: FULL MASTER GUIDE <span class="btn-bracket">&gt;</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Home Grown Projects Section -->
+    <section class="homegrown-section" id="homegrown">
+      <div class="hud-frame homegrown-hud">
+        <div class="hud-corner top-left"></div>
+        <div class="hud-corner top-right"></div>
+        <div class="hud-corner bottom-left"></div>
+        <div class="hud-corner bottom-right"></div>
+
+        <div class="homegrown-header">
+          <span class="terminal-prefix">&gt; ECOSYSTEM // IN-HOUSE_BUILDS</span>
+          <h2 class="hud-heading" data-value="// HOME GROWN PROJECTS">// HOME GROWN PROJECTS</h2>
+          <p class="hero-subtitle" style="margin-top: 0.5rem;">
+            Featured web platforms and digital tools engineered in-house by Yantra Manava.
+          </p>
+        </div>
+
+        <!-- 2 Home Grown Featured Cards Grid -->
+        <div class="homegrown-grid">
+          <!-- App 1: BiggBucks -->
+          <div class="hud-card homegrown-card">
+            <div class="homegrown-card-header">
+              <div class="homegrown-brand-title-wrap">
+                <div class="homegrown-app-logo-box biggbucks-box">
+                  <svg class="homegrown-logo-svg" viewBox="0 0 24 24" fill="none" stroke="#3ecf8e" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <line x1="2" y1="10" x2="22" y2="10"/>
+                    <circle cx="16" cy="15" r="1.5" fill="#3ecf8e"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="homegrown-app-name">BiggBucks</h3>
+                  <span class="homegrown-app-tag">Smart Financial Manager</span>
+                </div>
+              </div>
+              <a href="https://biggbucks.com" target="_blank" rel="noopener" class="btn-hud primary-btn homegrown-launch-btn">
+                <span>VISIT SITE</span>
+                <svg class="link-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+            <p class="homegrown-app-desc">
+              Track salary, plan budgets, manage EMI loans, recurring subscriptions, and grow your wealth with BiggBucks — your personal financial command center.
+            </p>
+            <div class="homegrown-pills-row">
+              <span class="homegrown-pill">Financial Command Center</span>
+              <span class="homegrown-pill">Budget &amp; Expense Analytics</span>
+              <span class="homegrown-pill">SIP &amp; Investment Tracker</span>
+            </div>
+          </div>
+
+          <!-- App 2: BadBoon -->
+          <div class="hud-card homegrown-card">
+            <div class="homegrown-card-header">
+              <div class="homegrown-brand-title-wrap">
+                <div class="homegrown-app-logo-box badboon-box">
+                  <svg class="homegrown-logo-svg" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2">
+                    <circle cx="12" cy="18.5" r="2" fill="#e11d48"/>
+                    <path d="M12 16.5 C10 12 8 8 6.5 4.5"/>
+                    <path d="M12 16.5 C11.3 11.5 10.6 7.5 10 3.5"/>
+                    <path d="M12 16.5 C12.7 11.5 13.4 7.5 14 3.5"/>
+                    <path d="M12 16.5 C14 12 16 8 17.5 4.5"/>
+                    <path d="M6.5 4.5 C9 5.6 15 5.6 17.5 4.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="homegrown-app-name">BadBoon</h3>
+                  <span class="homegrown-app-tag">Badminton Match &amp; Player Network</span>
+                </div>
+              </div>
+              <a href="https://badboon.in" target="_blank" rel="noopener" class="btn-hud primary-btn homegrown-launch-btn">
+                <span>VISIT SITE</span>
+                <svg class="link-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+            <p class="homegrown-app-desc">
+              Find badminton buddies near you. Match by skill level and venue, chat in real-time, locate nearby courts, and set up casual or competitive games.
+            </p>
+            <div class="homegrown-pills-row">
+              <span class="homegrown-pill">Court &amp; Player Matchmaking</span>
+              <span class="homegrown-pill">Realtime Game Invites</span>
+              <span class="homegrown-pill">Location Arena</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multimedia Projects Delivered To Section / Carousel -->
+        <div class="multimedia-delivered-section">
+          <div class="multimedia-title-wrap">
+            <span class="terminal-prefix">&gt; PORTFOLIO // CREATIVE_WORK</span>
+            <h3 class="multimedia-heading">MULTIMEDIA PROJECTS DELIVERED TO</h3>
+          </div>
+
+          <!-- Seamless Infinite Logo Carousel -->
+          <div class="multimedia-carousel-viewport">
+            <div class="multimedia-carousel-track">
+              <!-- Item 1: Radio Mirchi -->
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon mirchi-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <path d="M12 2c-4 4-6 7.5-6 11 0 3.3 2.7 6 6 6s6-2.7 6-6c0-3.5-2-7-6-11z" fill="#ea4335"/>
+                    <path d="M12 9c-1.5 1.5-2 3-2 4.5 0 1.1.9 2 2 2s2-.9 2-2c0-1.5-.5-3-2-4.5z" fill="#fbbc05"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Radio Mirchi 98.3 FM</span>
+              </div>
+
+              <!-- Item 2: Colors Kannada -->
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon colors-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <circle cx="12" cy="12" r="9" stroke="#9333ea" stroke-width="2"/>
+                    <path d="M12 4v16M4 12h16" stroke="#e11d48" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="#2563eb"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Colors Kannada</span>
+              </div>
+
+              <!-- Item 3: Bengaluru City Police -->
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon bcp-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z" fill="none" stroke="#00f0ff" stroke-width="2"/>
+                    <polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 15.8 9 17.5 9.5 14 7 11.5 10.5 11" fill="#ffcc00"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Bengaluru City Police</span>
+              </div>
+
+              <!-- Item 4: Namma Karnataka Memes -->
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon nkm-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#e11d48" stroke-width="2"/>
+                    <path d="M7 14l3-4 4 5 3-3 2 2" stroke="#fbbc05" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="9" cy="8" r="1.5" fill="#fbbc05"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Namma Karnataka Memes</span>
+              </div>
+
+              <!-- Duplicated set for seamless 100% infinite loop -->
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon mirchi-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <path d="M12 2c-4 4-6 7.5-6 11 0 3.3 2.7 6 6 6s6-2.7 6-6c0-3.5-2-7-6-11z" fill="#ea4335"/>
+                    <path d="M12 9c-1.5 1.5-2 3-2 4.5 0 1.1.9 2 2 2s2-.9 2-2c0-1.5-.5-3-2-4.5z" fill="#fbbc05"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Radio Mirchi 98.3 FM</span>
+              </div>
+
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon colors-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <circle cx="12" cy="12" r="9" stroke="#9333ea" stroke-width="2"/>
+                    <path d="M12 4v16M4 12h16" stroke="#e11d48" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="4" fill="#2563eb"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Colors Kannada</span>
+              </div>
+
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon bcp-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z" fill="none" stroke="#00f0ff" stroke-width="2"/>
+                    <polygon points="12 8 13.5 11 17 11.5 14.5 14 15 17.5 12 15.8 9 17.5 9.5 14 7 11.5 10.5 11" fill="#ffcc00"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Bengaluru City Police</span>
+              </div>
+
+              <div class="multimedia-card">
+                <div class="multimedia-logo-icon nkm-bg">
+                  <svg viewBox="0 0 24 24" fill="none" class="brand-svg">
+                    <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#e11d48" stroke-width="2"/>
+                    <path d="M7 14l3-4 4 5 3-3 2 2" stroke="#fbbc05" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="9" cy="8" r="1.5" fill="#fbbc05"/>
+                  </svg>
+                </div>
+                <span class="multimedia-name">Namma Karnataka Memes</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
