@@ -509,13 +509,24 @@ body {
 
 .about-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: start;
 }
 
 .creator-media-wrap {
   position: relative;
+}
+
+.ai-news-globe-wrap {
+  margin: 1.5rem auto 2.25rem auto;
+  width: 100%;
+  max-width: 540px;
+}
+
+.ai-news-globe-wrap .cyberpunk-host-frame {
+  height: 360px;
+  border-radius: 6px;
 }
 
 .image-hud-frame {
