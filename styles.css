@@ -2296,7 +2296,13 @@ body {
   box-sizing: border-box;
 }
 
-.biggbucks-box,
+.biggbucks-box {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .badboon-box {
   background: transparent;
   border: none;
