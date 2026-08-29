@@ -482,7 +482,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
       if (emailInput && emailInput.value.trim()) {
         const email = emailInput.value.trim();
 
-        // Persist subscription in LocalStorage
+        // Store subscriber email in LocalStorage
         try {
           const subscribers = JSON.parse(localStorage.getItem('yantra_subscribers') || '[]');
           if (!subscribers.includes(email)) {
@@ -495,7 +495,7 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
 
         if (msgBox) {
           msgBox.className = 'newsletter-msg success';
-          msgBox.innerHTML = `[SYS_MSG: 200 SUCCESS] &gt; <strong>${email}</strong> ENROLLED IN YANTRA MANAVA TECH INSIDER NETWORK.`;
+          msgBox.innerHTML = `[SYS_MSG: 200 SUCCESS] &gt; <strong>${email}</strong> HAS BEEN ENROLLED IN THE YANTRA MANAVA TECH INSIDER NETWORK.`;
         }
 
         emailInput.value = '';
