@@ -472,22 +472,40 @@ Bio    : Karnataka's Premier Technology Portal! 📍 Bengaluru, India`,
   // 6. NEWSLETTER FORM HANDLER
   // ==========================================================================
   const newsletterForm = document.getElementById('newsletter-form');
-  const emailInput = document.getElementById('subscriber-email');
-  const formToast = document.getElementById('form-toast');
 
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = emailInput.value.trim();
+      const emailInput = document.getElementById('email-input') || document.getElementById('subscriber-email');
+      const msgBox = document.getElementById('newsletter-msg') || document.getElementById('form-toast');
 
-      if (email) {
-        formToast.className = 'form-toast success';
-        formToast.innerHTML = `[SYS_MSG: 200 SUCCESS] &gt; <strong>${email}</strong> HAS BEEN ENROLLED IN THE YANTRA MANAVA TECH INSIDER NETWORK.`;
+      if (emailInput && emailInput.value.trim()) {
+        const email = emailInput.value.trim();
+
+        // Persist subscription in LocalStorage
+        try {
+          const subscribers = JSON.parse(localStorage.getItem('yantra_subscribers') || '[]');
+          if (!subscribers.includes(email)) {
+            subscribers.push(email);
+            localStorage.setItem('yantra_subscribers', JSON.stringify(subscribers));
+          }
+        } catch (err) {
+          console.warn('LocalStorage disabled:', err);
+        }
+
+        if (msgBox) {
+          msgBox.className = 'newsletter-msg success';
+          msgBox.innerHTML = `[SYS_MSG: 200 SUCCESS] &gt; <strong>${email}</strong> ENROLLED IN YANTRA MANAVA TECH INSIDER NETWORK.`;
+        }
+
         emailInput.value = '';
 
         setTimeout(() => {
-          formToast.innerHTML = '';
-        }, 5000);
+          if (msgBox) {
+            msgBox.innerHTML = '';
+            msgBox.className = 'newsletter-msg';
+          }
+        }, 6000);
       }
     });
   }
