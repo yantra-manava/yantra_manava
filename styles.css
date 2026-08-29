@@ -508,10 +508,27 @@ body {
    ========================================================================== */
 
 .about-grid {
+  display: block;
+  width: 100%;
+}
+
+.tech-bytes-layout {
   display: grid;
   grid-template-columns: 360px 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: start;
+}
+
+@media (max-width: 992px) {
+  .tech-bytes-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-bytes-layout .creator-media-wrap {
+    max-width: 440px;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+  }
 }
 
 .creator-media-wrap {
