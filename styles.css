@@ -1531,11 +1531,11 @@ body {
 }
 
 .zen-pro-con strong.pro-txt {
-  color: #00ff66;
+  color: var(--matrix-red);
 }
 
 .zen-pro-con strong.con-txt {
-  color: #ff3344;
+  color: var(--matrix-red);
 }
 
 .zen-cta-wrap {
@@ -1622,14 +1622,14 @@ body {
   padding: 1rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  color: #ff5566;
+  color: var(--matrix-red);
   overflow-x: auto;
   margin: 1rem 0;
   line-height: 1.5;
 }
 
 .guide-code-box code {
-  color: #ff99aa;
+  color: var(--matrix-red);
 }
 
 .sec-note-badge {
