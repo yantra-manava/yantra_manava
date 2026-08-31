@@ -1615,21 +1615,25 @@ body {
   color: var(--hud-white);
 }
 
+code {
+  color: #38bdf8;
+}
+
 .guide-code-box {
   background: #020403;
-  border: 1px solid rgba(255, 42, 75, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: 5px;
   padding: 1rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  color: var(--matrix-red);
+  color: #38bdf8;
   overflow-x: auto;
   margin: 1rem 0;
   line-height: 1.5;
 }
 
 .guide-code-box code {
-  color: var(--matrix-red);
+  color: #38bdf8;
 }
 
 .sec-note-badge {
