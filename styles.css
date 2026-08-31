@@ -1470,12 +1470,12 @@ body {
 
 .zen-card.claude-card,
 .zen-card.antigravity-card {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 3px solid var(--matrix-red);
 }
 
 .zen-card:hover {
   border-color: var(--matrix-red);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 22px var(--matrix-red-glow);
 }
 
 .zen-card-header {
@@ -1531,11 +1531,11 @@ body {
 }
 
 .zen-pro-con strong.pro-txt {
-  color: var(--matrix-red);
+  color: #00ff66;
 }
 
 .zen-pro-con strong.con-txt {
-  color: #ff6666;
+  color: #ff3344;
 }
 
 .zen-cta-wrap {
@@ -2446,16 +2446,16 @@ body {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 0 14px rgba(255, 42, 75, 0.45)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
 .colors-kannada-img {
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.65)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
+  filter: drop-shadow(0 0 14px rgba(255, 42, 75, 0.45)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
 }
 
 .multimedia-card:hover .multimedia-brand-img {
   transform: scale(1.18);
-  filter: drop-shadow(0 0 20px rgba(255, 42, 75, 0.5));
+  filter: drop-shadow(0 0 22px rgba(255, 42, 75, 0.85));
 }
 

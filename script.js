@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!canvas) return;
     columns = Math.floor(canvas.width / fontSize);
     drops = [];
+    const maxRow = Math.floor(canvas.height / fontSize) || 45;
     for (let i = 0; i < columns; i++) {
-      drops[i] = Math.random() * -100;
+      drops[i] = Math.floor(Math.random() * maxRow);
     }
   }
   initDrops();
@@ -103,15 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawMatrixRain() {
     if (!canvas || !ctx) return;
     // Semi-transparent background fade effect
-    ctx.fillStyle = 'rgba(4, 7, 6, 0.08)';
+    ctx.fillStyle = 'rgba(4, 7, 6, 0.12)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.font = `${fontSize}px 'Share Tech Mono', monospace`;
+    ctx.textBaseline = 'top';
 
     for (let i = 0; i < drops.length; i++) {
       const text = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
       
-      // Randomly color leading character WHITE, trailing characters MATRIX GREEN
+      // Randomly color leading character WHITE, trailing characters CYBER RED
       const isLead = Math.random() > 0.88;
       
       if (isLead) {
@@ -119,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.shadowColor = '#ffffff';
         ctx.shadowBlur = 8;
       } else {
-        ctx.fillStyle = 'rgba(255, 42, 75, 0.65)';
-        ctx.shadowColor = 'rgba(255, 42, 75, 0.4)';
+        ctx.fillStyle = 'rgba(255, 42, 75, 0.85)';
+        ctx.shadowColor = 'rgba(255, 42, 75, 0.5)';
         ctx.shadowBlur = 4;
       }
 
