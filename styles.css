@@ -1615,25 +1615,25 @@ body {
   color: var(--hud-white);
 }
 
-code {
-  color: #38bdf8;
+.zen-guide-section code,
+.zen-guide-steps code,
+.guide-code-box,
+.guide-code-box code {
+  color: #00f0ff;
 }
 
 .guide-code-box {
   background: #020403;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(0, 240, 255, 0.35);
   border-radius: 5px;
   padding: 1rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  color: #38bdf8;
+  color: #00f0ff;
   overflow-x: auto;
   margin: 1rem 0;
   line-height: 1.5;
-}
-
-.guide-code-box code {
-  color: #38bdf8;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
 
 .sec-note-badge {
@@ -1868,7 +1868,7 @@ code {
 }
 
 .term-user-cmd {
-  color: #38bdf8;
+  color: var(--matrix-red);
   font-weight: 600;
 }
 
@@ -1904,7 +1904,7 @@ code {
 }
 
 .prompt-path {
-  color: #38bdf8;
+  color: var(--matrix-red);
 }
 
 .terminal-input {
@@ -2067,7 +2067,8 @@ code {
   margin-bottom: 1rem;
 }
 
-.news-footer-tag {
+.news-footer-tag,
+.news-footer-tag code {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--matrix-red);
@@ -2152,7 +2153,7 @@ code {
 .logo-chatgpt { color: #10a37f; fill: #10a37f; filter: drop-shadow(0 0 6px rgba(16, 163, 127, 0.6)); }
 .logo-claude { color: #d97757; fill: #d97757; filter: drop-shadow(0 0 6px rgba(217, 119, 87, 0.6)); }
 .logo-gemini { color: #8ab4f8; fill: #8ab4f8; filter: drop-shadow(0 0 6px rgba(138, 180, 248, 0.6)); }
-.logo-cursor { color: #38bdf8; fill: #38bdf8; filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.6)); }
+.logo-cursor { color: var(--matrix-red); fill: var(--matrix-red); filter: drop-shadow(0 0 6px var(--matrix-red-glow)); }
 .logo-perplexity { color: #22b8cf; fill: #22b8cf; filter: drop-shadow(0 0 6px rgba(34, 184, 207, 0.6)); }
 .logo-v0 { color: #ffffff; fill: #ffffff; filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6)); }
 .logo-midjourney { color: #c084fc; fill: #c084fc; filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.6)); }
