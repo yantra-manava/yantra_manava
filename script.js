@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         char: matrixChars.charAt(Math.floor(Math.random() * matrixChars.length)),
         alpha: 1.0,
         vy: Math.random() * 3 + 1,
-        color: Math.random() > 0.3 ? '#ffffff' : '#00ff66'
+        color: Math.random() > 0.3 ? '#ffffff' : '#ff2a4b'
       });
     }
   }
@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.shadowColor = '#ffffff';
         ctx.shadowBlur = 8;
       } else {
-        ctx.fillStyle = 'rgba(0, 255, 102, 0.65)';
-        ctx.shadowColor = 'rgba(0, 255, 102, 0.4)';
+        ctx.fillStyle = 'rgba(255, 42, 75, 0.65)';
+        ctx.shadowColor = 'rgba(255, 42, 75, 0.4)';
         ctx.shadowBlur = 4;
       }
 
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render Touch Burst Particles
     for (let i = touchRipples.length - 1; i >= 0; i--) {
       const p = touchRipples[i];
-      ctx.fillStyle = p.color === '#ffffff' ? `rgba(255, 255, 255, ${p.alpha})` : `rgba(0, 255, 102, ${p.alpha})`;
+      ctx.fillStyle = p.color === '#ffffff' ? `rgba(255, 255, 255, ${p.alpha})` : `rgba(255, 42, 75, ${p.alpha})`;
       ctx.shadowColor = p.color;
       ctx.shadowBlur = 10;
       ctx.font = `${fontSize * 1.25}px 'Share Tech Mono', monospace`;
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
         const isWhite = Math.random() > 0.85;
 
-        hostCtx.fillStyle = isWhite ? '#ffffff' : 'rgba(0, 255, 102, 0.75)';
+        hostCtx.fillStyle = isWhite ? '#ffffff' : 'rgba(255, 42, 75, 0.75)';
         hostCtx.fillText(text, i * hostFontSize, hostDrops[i] * hostFontSize);
 
         if (hostDrops[i] * hostFontSize > hostCanvas.height && Math.random() > 0.95) {
