@@ -1621,21 +1621,21 @@ body {
 .zen-guide-steps code,
 .guide-code-box,
 .guide-code-box code {
-  color: #ff9900;
+  color: #ff3399;
 }
 
 .guide-code-box {
-  background: #040806;
-  border: 1px solid rgba(255, 153, 0, 0.4);
+  background: #030605;
+  border: 1px solid rgba(255, 51, 153, 0.25);
   border-radius: 5px;
   padding: 1rem 1.25rem;
   font-family: var(--font-mono);
   font-size: 0.88rem;
-  color: #ff9900;
+  color: #ff3399;
   overflow-x: auto;
   margin: 1rem 0;
   line-height: 1.5;
-  box-shadow: 0 0 15px rgba(255, 153, 0, 0.15);
+  box-shadow: 0 0 15px rgba(255, 51, 153, 0.1);
 }
 
 .sec-note-badge {
