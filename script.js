@@ -2,6 +2,38 @@
    YANTRA MANAVA - DARK MATRIX JAVASCRIPT CONTROLLER
    ========================================================================== */
 
+// Disable right-click context menu across the entire site
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  return false;
+});
+
+// Copy Code & Prompt Utility for Guide Code Boxes
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.copy-code-btn');
+  if (!btn) return;
+
+  const codeBox = btn.closest('.guide-code-box');
+  if (!codeBox) return;
+
+  const codeEl = codeBox.querySelector('code') || codeBox.querySelector('pre');
+  if (!codeEl) return;
+
+  const textToCopy = codeEl.innerText.trim();
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    const origHTML = btn.innerHTML;
+    btn.classList.add('copied');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> COPIED!`;
+
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.innerHTML = origHTML;
+    }, 2000);
+  }).catch((err) => {
+    console.error('Failed to copy: ', err);
+  });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================================================

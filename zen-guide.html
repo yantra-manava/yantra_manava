@@ -108,53 +108,80 @@
       <div class="zen-flow-grid" style="margin-top: 1.5rem;">
         <div class="zen-flow-step">
           <div class="zen-step-num">STEP 01</div>
-          <h4 class="zen-step-title">Host 1-Pager Baseline</h4>
-          <p class="zen-step-desc">Have a plain one-pager landing page hosted (get it online) using GitHub &amp; Vercel!</p>
+          <h4 class="zen-step-title">Claude &amp; GitHub Setup</h4>
+          <p class="zen-step-desc">Initialize Claude Code AI builder in your terminal and link your GitHub repository.</p>
         </div>
         <div class="zen-flow-step">
           <div class="zen-step-num">STEP 02</div>
-          <h4 class="zen-step-title">Domain Connection</h4>
-          <p class="zen-step-desc">Finish server-side chores (connect your custom domain and configure DNS records).</p>
+          <h4 class="zen-step-title">1-Pager Baseline</h4>
+          <p class="zen-step-desc">Use Claude to generate your app's 1-pager baseline and host it live on Vercel!</p>
         </div>
         <div class="zen-flow-step">
           <div class="zen-step-num">STEP 03</div>
-          <h4 class="zen-step-title">Supabase + Google OAuth</h4>
-          <p class="zen-step-desc">Use Supabase with Google OAuth to integrate a login gateway and user profiles on your hosted web app. (Crucial: do this after domain connection!)</p>
+          <h4 class="zen-step-title">Domain &amp; DNS Setup</h4>
+          <p class="zen-step-desc">Finish server-side chores (connect your custom domain and configure DNS records).</p>
         </div>
         <div class="zen-flow-step">
           <div class="zen-step-num">STEP 04</div>
-          <h4 class="zen-step-title">Productionized Baseline</h4>
-          <p class="zen-step-desc">Yay! You have your core app productionalised. Now have fun building out features fearlessly.</p>
+          <h4 class="zen-step-title">Supabase + Google Login</h4>
+          <p class="zen-step-desc">Integrate Supabase RLS and Google OAuth 2.0 login gateway directly on your live domain.</p>
         </div>
       </div>
     </div>
 
     <!-- Full Detailed Step-by-Step Blueprint -->
 
-    <!-- Phase 1: Claude Setup -->
+    <!-- Phase 1: Claude & GitHub Setup -->
     <div class="guide-step-block">
       <div class="guide-step-header">
         <span class="guide-step-num">PHASE 1</span>
-        <h3 class="guide-step-title">Claude AI Setup</h3>
+        <h3 class="guide-step-title">Claude &amp; GitHub Repository Setup</h3>
       </div>
       <p class="bio-text">
-        1. Open your terminal or developer workspace.<br>
+        1. Open your terminal or development environment.<br>
         2. Install and initialize <strong>Claude Code</strong> as your autonomous AI pair programmer.<br>
-        3. Verify node environment (v18+) and Git installation.<br>
-        4. Configure your local workspace directory before initializing database and deployment services:
+        3. Create a new private repository on GitHub (e.g., <code>my-awesome-app</code>) and connect your local repository.<br>
+        4. Copy and give the following initialization prompt to Claude:
       </p>
 
       <div class="guide-code-box">
-<pre><code><span class="code-comment">// Initialize Claude AI Assistant in Terminal:</span>
-<span class="code-key">npm install -g</span> <span class="code-val">@anthropic-ai/claude-code</span>
-<span class="code-key">claude</span> <span class="code-comment">// Launches AI pair programmer in local workspace</span></code></pre>
+        <div class="code-box-header">
+          <span class="code-box-label">// PHASE 1 PROMPT: CLAUDE &amp; GITHUB SETUP</span>
+          <button class="copy-code-btn" aria-label="Copy Prompt">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY PROMPT
+          </button>
+        </div>
+<pre><code><span class="code-comment">// Copy &amp; Paste Prompt for Claude Code:</span>
+<span class="code-key">Please set up a new project workspace. Initialize Git tracking, check Node.js v18+ environment, configure package.json, and link the local git branch 'main' to my GitHub remote repository.</span></code></pre>
       </div>
     </div>
 
-    <!-- Phase 2 -->
+    <!-- Phase 2: Create 1-Pager Baseline -->
     <div class="guide-step-block">
       <div class="guide-step-header">
         <span class="guide-step-num">PHASE 2</span>
+        <h3 class="guide-step-title">Create 1-Pager Baseline (App Name &amp; Hero)</h3>
+      </div>
+      <p class="bio-text">
+        Before adding database or login logic, create a clean 1-pager landing page baseline for your app. Give your app a clear name, tagline, hero section, and responsive layout structure. Copy and give this prompt to Claude:
+      </p>
+
+      <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// PHASE 2 PROMPT: 1-PAGER BASELINE GENERATION</span>
+          <button class="copy-code-btn" aria-label="Copy Prompt">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY PROMPT
+          </button>
+        </div>
+<pre><code><span class="code-comment">// Copy &amp; Paste Prompt to Generate 1-Pager Baseline:</span>
+<span class="code-key">Create a clean, responsive 1-pager web app baseline named '[YOUR_APP_NAME]'. Include a dark cyber HUD navigation bar, hero banner with app tagline, core feature grid, CTA button, and semantic HTML/CSS/JS ready for Vercel deployment.</span></code></pre>
+      </div>
+    </div>
+
+    <!-- Phase 3: Supabase Setup -->
+    <div class="guide-step-block">
+      <div class="guide-step-header">
+        <span class="guide-step-num">PHASE 3</span>
         <h3 class="guide-step-title">Supabase Project Creation &amp; RLS Configuration</h3>
       </div>
       <p class="bio-text">
@@ -167,6 +194,12 @@
       </p>
 
       <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// SUPABASE API CREDENTIALS</span>
+          <button class="copy-code-btn" aria-label="Copy Credentials">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY
+          </button>
+        </div>
 <pre><code><span class="code-comment">// API Keys Settings URL:</span>
 https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
 
@@ -176,31 +209,36 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </div>
     </div>
 
-    <!-- Phase 3 -->
+    <!-- Phase 4: Vercel Deployment -->
     <div class="guide-step-block">
       <div class="guide-step-header">
-        <span class="guide-step-num">PHASE 3</span>
+        <span class="guide-step-num">PHASE 4</span>
         <h3 class="guide-step-title">GitHub Repository &amp; Vercel Deployment</h3>
       </div>
       <p class="bio-text">
-        1. Create a new private repository on GitHub (e.g., <code>my-awesome-app</code>).<br>
-        2. Open Git Desktop (or terminal) and create/connect your local repository targeting your code workspace.<br>
-        3. Create a project in Vercel, link your GitHub repository, and add the required environment variables:
+        1. Open Git Desktop (or terminal) and push your local commits to GitHub.<br>
+        2. Log in to Vercel, import your GitHub repository, and configure environment variables:<br>
       </p>
 
       <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// VERCEL ENV CONFIGURATION</span>
+          <button class="copy-code-btn" aria-label="Copy Environment Variables">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY
+          </button>
+        </div>
 <pre><code><span class="code-comment">// Vercel Environment Variables Configuration:</span>
 <span class="code-key">NEXT_PUBLIC_SUPABASE_URL</span>      = <span class="code-val">https://&lt;YOUR_PROJECT_ID&gt;.supabase.co</span>
 <span class="code-key">NEXT_PUBLIC_SUPABASE_ANON_KEY</span> = <span class="code-val">sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</span></code></pre>
       </div>
 
-      <p class="bio-text">4. Click <strong>Deploy</strong> to push your 1-pager baseline live on Vercel!</p>
+      <p class="bio-text">3. Click <strong>Deploy</strong> to push your 1-pager baseline live on Vercel!</p>
     </div>
 
-    <!-- Phase 4 (Crystal Clear DNS Breakdown) -->
+    <!-- Phase 5: Custom Domain Connection & DNS Records Setup -->
     <div class="guide-step-block">
       <div class="guide-step-header">
-        <span class="guide-step-num">PHASE 4</span>
+        <span class="guide-step-num">PHASE 5</span>
         <h3 class="guide-step-title">Custom Domain Connection &amp; DNS Records Setup</h3>
       </div>
       <p class="bio-text">
@@ -213,6 +251,12 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </p>
 
       <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// DNS MANAGEMENT RECORDS</span>
+          <button class="copy-code-btn" aria-label="Copy DNS Records">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY
+          </button>
+        </div>
 <pre><code><span class="code-comment">// RECORD 1: APEX / ROOT DOMAIN (yourdomainname.com)</span>
 <span class="code-key">Type:</span>         <span class="code-val">A</span>
 <span class="code-key">Name / Host:</span>  <span class="code-val">@</span> <span class="code-comment">(or leave blank if root)</span>
@@ -234,10 +278,10 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </p>
     </div>
 
-    <!-- Phase 5 -->
+    <!-- Phase 6: Google Cloud Console OAuth -->
     <div class="guide-step-block">
       <div class="guide-step-header">
-        <span class="guide-step-num">PHASE 5</span>
+        <span class="guide-step-num">PHASE 6</span>
         <h3 class="guide-step-title">Google Cloud Console OAuth 2.0 Credentials</h3>
       </div>
       <p class="bio-text">
@@ -250,6 +294,12 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </p>
 
       <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// OAUTH REDIRECT URI</span>
+          <button class="copy-code-btn" aria-label="Copy URI">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY
+          </button>
+        </div>
 <pre><code><span class="code-comment">// Supabase Authorized OAuth Redirect URI:</span>
 <span class="code-val">https://&lt;YOUR_PROJECT_ID&gt;.supabase.co/auth/v1/callback</span></code></pre>
       </div>
@@ -257,10 +307,10 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       <p class="bio-text">7. Click <strong>Create</strong> and download/copy your <code>Client ID</code> and <code>Client Secret</code>.</p>
     </div>
 
-    <!-- Phase 6 -->
+    <!-- Phase 7: Supabase Provider Setup -->
     <div class="guide-step-block">
       <div class="guide-step-header">
-        <span class="guide-step-num">PHASE 6</span>
+        <span class="guide-step-num">PHASE 7</span>
         <h3 class="guide-step-title">Supabase Provider Setup &amp; Domain Authorizations</h3>
       </div>
       <p class="bio-text">
@@ -274,6 +324,12 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </p>
 
       <div class="guide-code-box">
+        <div class="code-box-header">
+          <span class="code-box-label">// AUTHORIZED JAVASCRIPT ORIGINS</span>
+          <button class="copy-code-btn" aria-label="Copy Origins">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> COPY
+          </button>
+        </div>
 <pre><code><span class="code-comment">// Google Cloud Console Authorized JavaScript Origins:</span>
 <span class="code-val">https://yourdomainname.com</span>
 <span class="code-val">https://www.yourdomainname.com</span></code></pre>
