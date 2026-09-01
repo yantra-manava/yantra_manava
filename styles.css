@@ -1626,16 +1626,42 @@ body {
 
 .guide-code-box {
   background: #030605;
-  border: 1px solid rgba(255, 51, 153, 0.25);
-  border-radius: 5px;
-  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255, 51, 153, 0.22);
+  border-radius: 6px;
+  padding: 1.1rem 1.25rem;
   font-family: var(--font-mono);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: #ff3399;
   overflow-x: auto;
-  margin: 1rem 0;
-  line-height: 1.5;
-  box-shadow: 0 0 15px rgba(255, 51, 153, 0.1);
+  margin: 1.25rem 0;
+  line-height: 1.6;
+  box-shadow: 0 0 15px rgba(255, 51, 153, 0.08);
+}
+
+.guide-code-box pre {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.code-comment {
+  color: #94a3b8;
+  font-style: italic;
+  display: inline-block;
+  margin-bottom: 0.15rem;
+}
+
+.code-key {
+  color: var(--matrix-cyan);
+  font-weight: 600;
+}
+
+.code-val {
+  color: #ff3399;
 }
 
 .sec-note-badge {
@@ -1752,7 +1778,24 @@ body {
   .zen-card-badge {
     align-self: flex-start;
   }
+
+  .guide-code-box {
+    padding: 0.85rem 1rem;
+    font-size: 0.74rem;
+    line-height: 1.5;
+    border-radius: 5px;
+  }
 }
+
+@media (max-width: 580px) {
+  .guide-code-box {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.68rem;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    word-break: break-word;
+    white-space: pre-wrap;
+  }
 
 @media (max-width: 580px) {
   .header-container {

@@ -180,12 +180,12 @@
       </p>
 
       <div class="guide-code-box">
-<code>// API Keys Settings URL:
+<pre><code><span class="code-comment">// API Keys Settings URL:</span>
 https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
 
-// Extract Credentials:
-// 1. Project URL: https://&lt;YOUR_PROJECT_ID&gt;.supabase.co
-// 2. Publishable Anon Key: sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</code>
+<span class="code-comment">// Extract Credentials:</span>
+<span class="code-key">Project URL</span>          = <span class="code-val">https://&lt;YOUR_PROJECT_ID&gt;.supabase.co</span>
+<span class="code-key">Publishable Anon Key</span> = <span class="code-val">sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</span></code></pre>
       </div>
     </div>
 
@@ -202,9 +202,9 @@ https://supabase.com/dashboard/project/&lt;YOUR_PROJECT_ID&gt;/settings/api-keys
       </p>
 
       <div class="guide-code-box">
-<code>// Vercel Environment Variables Configuration:
-NEXT_PUBLIC_SUPABASE_URL = https://&lt;YOUR_PROJECT_ID&gt;.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY = sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</code>
+<pre><code><span class="code-comment">// Vercel Environment Variables Configuration:</span>
+<span class="code-key">NEXT_PUBLIC_SUPABASE_URL</span>      = <span class="code-val">https://&lt;YOUR_PROJECT_ID&gt;.supabase.co</span>
+<span class="code-key">NEXT_PUBLIC_SUPABASE_ANON_KEY</span> = <span class="code-val">sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</span></code></pre>
       </div>
 
       <p class="bio-text">4. Click <strong>Deploy</strong> to push your 1-pager baseline live on Vercel!</p>
@@ -226,17 +226,17 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY = sb_publishable_&lt;YOUR_ANON_KEY_HERE&gt;</code>
       </p>
 
       <div class="guide-code-box">
-<code>// RECORD 1: APEX / ROOT DOMAIN (yourdomainname.com)
-Type:         A
-Name / Host:  @ (or leave blank if your registrar uses blank for root)
-Value / IP:   76.76.21.21 (Vercel Anycast IP)
-TTL:          Auto (or 3600)
+<pre><code><span class="code-comment">// RECORD 1: APEX / ROOT DOMAIN (yourdomainname.com)</span>
+<span class="code-key">Type:</span>         <span class="code-val">A</span>
+<span class="code-key">Name / Host:</span>  <span class="code-val">@</span> <span class="code-comment">(or leave blank if root)</span>
+<span class="code-key">Value / IP:</span>   <span class="code-val">76.76.21.21</span> <span class="code-comment">(Vercel Anycast IP)</span>
+<span class="code-key">TTL:</span>          <span class="code-val">Auto (or 3600)</span>
 
-// RECORD 2: WWW SUBDOMAIN (www.yourdomainname.com)
-Type:         CNAME
-Name / Host:  www
-Value / Target: cname.vercel-dns.com (or your project's assigned Vercel CNAME token)
-TTL:          Auto (or 3600)</code>
+<span class="code-comment">// RECORD 2: WWW SUBDOMAIN (www.yourdomainname.com)</span>
+<span class="code-key">Type:</span>         <span class="code-val">CNAME</span>
+<span class="code-key">Name / Host:</span>  <span class="code-val">www</span>
+<span class="code-key">Value / Target:</span> <span class="code-val">cname.vercel-dns.com</span>
+<span class="code-key">TTL:</span>          <span class="code-val">Auto (or 3600)</span></code></pre>
       </div>
 
       <p class="bio-text">
@@ -263,8 +263,8 @@ TTL:          Auto (or 3600)</code>
       </p>
 
       <div class="guide-code-box">
-<code>// Supabase Authorized OAuth Redirect URI:
-https://&lt;YOUR_PROJECT_ID&gt;.supabase.co/auth/v1/callback</code>
+<pre><code><span class="code-comment">// Supabase Authorized OAuth Redirect URI:</span>
+<span class="code-val">https://&lt;YOUR_PROJECT_ID&gt;.supabase.co/auth/v1/callback</span></code></pre>
       </div>
 
       <p class="bio-text">7. Click <strong>Create</strong> and download/copy your <code>Client ID</code> and <code>Client Secret</code>.</p>
@@ -287,9 +287,9 @@ https://&lt;YOUR_PROJECT_ID&gt;.supabase.co/auth/v1/callback</code>
       </p>
 
       <div class="guide-code-box">
-<code>// Google Cloud Console Authorized JavaScript Origins:
-https://yourdomainname.com
-https://www.yourdomainname.com</code>
+<pre><code><span class="code-comment">// Google Cloud Console Authorized JavaScript Origins:</span>
+<span class="code-val">https://yourdomainname.com</span>
+<span class="code-val">https://www.yourdomainname.com</span></code></pre>
       </div>
     </div>
 
